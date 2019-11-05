@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>User Generator</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -59,7 +59,7 @@
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-top: 0px;
             }
         </style>
     </head>
@@ -81,19 +81,40 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    User Generator
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
+                    <a href="https://laravel.com/docs">Generator</a>
+                    <a href="https://laracasts.com">Help</a>
+                    <!--<a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a>-->
                 </div>
+
+                <p> Welcome to User Generator </p>
+                <?php
+                  $sample = "hello";
+                  $names = ["name1", "name2", "name3", "name4", "name5"];
+                  $surnames = ["surame1", "surname2", "surname3", "surname4", "surname5"];
+                  $usernames = ["username1", "username2", "username3", "username4", "username5"];
+                  $titles = ["Mr", "Mrs", "Miss", "Ms", "Dr"];
+
+                  $picked_name = $names[mt_rand(0,4)];
+                  $picked_surname = $surnames[mt_rand(0,4)];
+                  $picked_username = $usernames[mt_rand(0,4)];
+                  $picked_title = $titles[mt_rand(0,4)];
+
+                  echo
+                    "<img src='https://randomuser.me/api/portraits/men/65.jpg' alt='user_pic'>
+                    <h1>Title: $picked_title</h1>
+                    <h1>First Name: $picked_name</h1>
+                    <h1>Last Name: $picked_surname</h1>
+                    <h1>Username: $picked_username</h1>";
+                  ?>
             </div>
         </div>
     </body>
