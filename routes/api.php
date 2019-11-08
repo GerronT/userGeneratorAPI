@@ -17,5 +17,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// List a single person
+// List x amount of people
 Route::get('results/{id}', 'PeopleController@show');
